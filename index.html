@@ -4,10 +4,139 @@
 <head>
   <meta charset="utf-8">
   <title>Samuel Phillips Music History</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
 
+	<div id="wrapper">
+
+		<div id="navBar">
+			<nav>
+				<!-- pink (#FFB4B0) navigation bar with options "view music" "add music" and "profile" -->
+
+				<ul>
+					<li><a href="#">View Music</a></li>
+					<li id="addMusic"><a href="#">Add Music</a></li>
+					<li><a href="#">Profile</a></li>
+				</ul>
+
+
+
+			</nav>
+		</div>
+		<article>
+
+			<div id="filter">
+				<!-- blue (#4DD7FA) filter control  -->
+
+
+				<div id="songLengthFilter">
+					<form>
+						Song Length: <br>
+						<input class="widthAdjust" type="range" name="songLengthSlider">
+					</form>
+				</div>
+
+
+				<div id="artistFilter">
+					<form id="artistSelect">
+						Artist: <br>
+						<select>
+							<option value=""></option>
+							<option value="animalCollective">Animal Collective</option>
+							<option value="bassnectar">Bassnectar</option>
+							<option value="theFlamingLips">The Flaming Lips</option>
+							<option value="modestMouse">Modest Mouse</option>
+							<option value="tipper">Tipper</option>
+						</select>
+					</form>
+
+					
+				</div>
+
+
+				<div id="albumFilter">
+					<form id="albumSelect">
+						Album: <br>
+						<select>
+							<option value=""></option>
+							<option value="strawberryJam">Strawberry Jam</option>
+							<option value="merriweatherPostPavilion">Merriweather Post Pavilion</option>
+							<option value="mesmerizingTheUltra">Mesmerizing The Ultra</option>
+							<option value="undergroundCommunication">Underground Communication</option>
+							<option value="atWarWithTheMystics">At War With The Mystics</option>
+							<option value="theSoftBulletin">The Soft Bulletin</option>
+							<option value="theMoonAndAntarctica">The Moon &amp; Antarctica</option>
+							<option value="weWereDeadBeforeTheShipEvenSank">We Were Dead Before The Ship Even Sank</option>
+							<option value="fathoms">Fathoms</option>
+							<option value="seamlessUnspeakableSomething">Seamless Unspeakable Something</option>
+						</select>
+					</form>
+					
+				</div>
+
+
+				<div id="genreFilter">
+
+					<form>
+						Genre: <br>
+
+						<section id="genreLeft">
+							<input type="checkbox" name="genre" value="alt">Alt <br>
+							<input type="checkbox" name="genre" value="psych">Psych <br>
+						</section>
+						<section id="genreRight">
+							<input type="checkbox" name="genre" value="bass">Bass<br>
+							<input type="checkbox" name="genre" value="glitch">Glitch<br>
+						</section>
+
+					</form>	
+
+					
+				</div>
+
+
+				<div id="filterSubmit">
+					<form>
+						<input class="widthAdjust" id="submitButton" type="submit" name="filter" value="Filter">
+					</form>
+				</div>
+
+
+			</div>
+
+			<div id="songList">
+				<!-- light yellow (#FEFAC0) boxed list of songs, song names/details in dark yellow (#785616) -->
+
+				<div>
+					<!-- song 1 -->
+					<h2>Fireworks</h2>
+					<p>Animal Collective | Strawberry Jam | Psych</p>
+				</div>
+
+				<div>
+					<!-- song 2 -->
+					<h2>Leprechauns Arise</h2>
+					<p>Bassnectar | Mesmerizing the Ultra | Bass</p>
+				</div>
+
+				<div>
+					<!-- song 3 -->
+					<h2>My Cosmic Autumn Rebellion</h2>
+					<p>The Flaming Lips | At War With the Mystics | Alt</p>
+				</div>
+
+				<div>
+					<!-- song 4 -->
+					<h2>Deep Sixing</h2>
+					<p>Tipper | Fathoms | Glitch</p>
+				</div>
+				
+			</div>
+		</article>
+
+	</div>  <!--here is where the wrapper ends -->
 
 </body>
 </html>
