@@ -57,7 +57,7 @@ Once you are done, make sure you add your files to git, make a commit, and then 
 
 
 
-
+<!-- 
 
 instruction set for version 2
 
@@ -71,18 +71,18 @@ Use JavaScript arrays, loops, and innerHTML to show the music you love.
 
 Students must use JavaScript to create a list of songs in the index.html file for their Music History project. Have them download the songs.js file, which contains an array of strings with song information.
 
-<!-- Each student must add one song to the beginning and the end of the array. -->
+Each student must add one song to the beginning and the end of the array.
 
 
-<!-- Loop over the array and remove any words or characters that obviously don't belong. -->
+Loop over the array and remove any words or characters that obviously don't belong.
 
 
-<!-- Students must find and replace the > character in each item with a - character. -->
+Students must find and replace the > character in each item with a - character.
 
 
-<!-- Must add each string to the DOM in index.html in the main content area. -->
+Must add each string to the DOM in index.html in the main content area.
 
-<!-- {Song name} by {Artist} on the album {Album} -->
+{Song name} by {Artist} on the album {Album}
 Merging your branch
 
 After you've got all of the requirements completed, follow these steps.
@@ -91,6 +91,74 @@ In your musichistory directory, enter the command git checkout master. This swit
 git merge -X theirs version2
 If you see a vim screen with a default message in it just :x to save and exit.
 Your branch is now merged into the master branch and you can push the master branch up to Github with git push origin master
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+instructions for version 4 (skipped 3 for now)
+
+
+
+
+
+
+Instructions
+
+Part One
+
+<!-- Read from local JSON file with an XHR. -->
+<!-- Loop over results and inject into Music History list view. -->
+Add delete button DOM to each row and, when it is clicked, delete the entire row in the DOM.
+Part Two
+
+Take your music and split it into two JSON file instead of them all living on one file.
+Add a button at the bottom of your music list and label it "More >".
+Load the songs from the first list and inject the DOM into the document as you've already done.
+When the user clicks that button, load the songs from the second JSON file and append them to the bottom of the existing music, but before the More button.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
