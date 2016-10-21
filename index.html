@@ -16,16 +16,16 @@
 				<!-- pink (#FFB4B0) navigation bar with options "view music" "add music" and "profile" -->
 
 				<ul>
-					<li><a href="#">View Music</a></li>
+					<li id="listMusic"><a href="#">List Music</a></li>
 					<li id="addMusic"><a href="#">Add Music</a></li>
-					<li><a href="#">Profile</a></li>
+					<!-- <li><a href="#">Profile</a></li> -->
 				</ul>
 
 
 
 			</nav>
 		</div>
-		<article>
+		<article id="listMusicView">
 
 			<div id="filter">
 				<!-- blue (#4DD7FA) filter control  -->
@@ -139,11 +139,23 @@
 			</div>
 		</article>
 
+		<article id="addMusicView" class="hidden">
+			<span>Song Name:</span>
+			<input type="text" size="30" name="inputSongName" id="inputSongName"> <br>
+			<span>Artist:</span>
+			<input type="text" size="30" name="inputArtistName" id="inputArtistName"> <br>
+			<span>Album:</span>
+			<input type="text" size="30" name="inputAlbumName" id="inputAlbumName"> <br>
+
+			<button id="addButton">Add</button>
+		</article>
+
 	</div>  <!--here is where the wrapper ends -->
 
 
 	<!-- <script type="text/javascript" src="songs.js"></script> -->
 	<script type="text/javascript" src="musicHistoryMain.js"></script>
+	<script type="text/javascript" src="list.js"></script>
 
 
 
