@@ -4,7 +4,7 @@ body {
 }
 
 #wrapper {
-	width: 100%;
+	width: 80%;
 	margin: auto;
 }
 
@@ -106,3 +106,45 @@ h2 {
 
 article {
 }
+
+
+
+
+
+.visible {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+
+#addMusicView {
+	width: 30%;
+	margin: auto;
+	text-align: justify;
+	margin: 5em auto;
+	line-height: 2em;
+	/*background: 4px solid black;*/
+}
+
+/*#addMusicView span {
+	float: left;
+}
+*/
+#addMusicView input {
+	float: right;
+}
+
+#addMusicView button {
+	position: relative;
+	left: 50%;
+	padding: 5px 25px;
+}
+
+
+
+
+
+
