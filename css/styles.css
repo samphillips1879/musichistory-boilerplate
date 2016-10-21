@@ -37,7 +37,7 @@ li {
 	border: 2px solid black;
 	padding: 1%;
 	float: left;
-	min-height: 400px;
+	height: 600px;
 
 }
 
@@ -91,7 +91,9 @@ h2 {
 	padding: 1%;
 	min-height: 400px;
 	margin-left: 1%;
-	line-height: 2em;
+	overflow: auto;
+	height: 600px;
+	/*line-height: 2em;*/
 
 }
 
@@ -144,6 +146,10 @@ article {
 }
 
 
+.song-block {
+	border: 2px solid black;
+	padding: 1%;
+}
 
 
 

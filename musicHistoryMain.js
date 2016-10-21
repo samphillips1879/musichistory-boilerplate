@@ -52,17 +52,6 @@ function createSongObject() {
 }
 
 
-// var songCounter = 0
-// var newSongs = {};
-// function createSongObject() {
-//     newSong.title = inputSongName.value;
-//     newSong.artist = inputArtistName.value;
-//     newSong.album = inputAlbumName.value;
-//     console.log("newSong", newSong);
-//     songCounter++;
-// }
-
-
 
 
 
@@ -88,6 +77,7 @@ function createSongObject() {
 /////////////
 var songsRequest = new XMLHttpRequest();
 
+var songList = document.getElementById("songListSongHolder");
 
 songsRequest.addEventListener("load", songsHandler);
 function songsHandler() {
@@ -95,37 +85,68 @@ function songsHandler() {
 
 
 
-	var data = JSON.parse(event.target.responseText);
-	console.log("data", data);
+    var data = JSON.parse(event.target.responseText);
+    console.log("data", data);
 
 
 
 
-	var songList = document.getElementById("songList");
 
 
 
 	for (var currentSong in data.songs) {
-	var songData = '';
-    var song = data.songs[currentSong]
-    songData += "<div class='song-block'>";
-    songData += `<h1>${song.title}</h1>`;
-    songData += "<div class='artist'>Performed by ";
-    songData += song.artist;
-    songData += "</div>";
-    songData += "<div class='album'>On the album ";
-    songData += song.album;
-    songData += "</div>";
-    songData += "</div>";
+    	var songOutput = '';
+        var song = data.songs[currentSong]
+        songOutput += "<div class='song-block'>";
+        songOutput += `<h1>${song.title}</h1>`;
+        songOutput += "<div class='artist'>Performed by ";
+        songOutput += song.artist;
+        songOutput += "</div>";
+        songOutput += "<div class='album'>On the album ";
+        songOutput += song.album;
+        songOutput += "</div>";
+        songOutput += "<button>Delete</button></div>";
 
-    songList.innerHTML += songData;
+        songList.innerHTML += songOutput;
 
 	}
+
 }
+songList.addEventListener("click", songDelete);
+
+function songDelete(event) {
+    if (event.target.innerHTML === "Delete") {
+        console.log("delete innerHTML Test Works");
+        event.target.parentElement.remove();       //THIS LINE IS HOW TO REMOVE THE PARENT OF THE DELETE BUTTON
+
+    }   
+        console.log("deleteEvent", event);
+}
+
 
 
 songsRequest.open("GET", "songs.json");
 songsRequest.send();
+
+
+var songs2Request = new XMLHttpRequest();
+songs2Request.open("GET", "songs2.json");
+
+songs2Request.addEventListener("load", songsHandler);
+
+function requestSongs2() {
+    songs2Request.send();
+}
+
+
+
+document.getElementById("moreButton").addEventListener("click", requestSongs2);
+
+
+document.getElementById("moreButton").addEventListener("click", function(event) {
+    console.log("moreButtonClicked", event);
+});
+
 
 
 

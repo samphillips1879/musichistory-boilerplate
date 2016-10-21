@@ -1,0 +1,19 @@
+{
+  "songs": [
+  	{
+  		"title": "My Cosmic Autumn Rebellion",
+  		"artist": "The Flaming Lips",
+  		"album": "At War With The Mystics"
+  	},
+  	{
+  		"title": "3rd Planet",
+  		"artist": "Modest Mouse",
+  		"album": "The Moon and Antarctica"
+  	},
+  	{
+  		"title": "Ambergris",
+  		"artist": "Tipper",
+  		"album": "Fathoms"
+  	}
+  ]
+}
