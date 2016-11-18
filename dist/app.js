@@ -168,9 +168,12 @@ function songsHandler() {
 	for (let currentSong in data.songs) {
         let songOutput = '';
         let song = data.songs[currentSong];
+        console.log("song", song);
         songOutput += `<div class='song-block'><h1>${song.title}</h1><div class='artist'>Performed by ${song.artist}</div><div class='album'>On the album ${song.album}</div><button>Delete</button></div>`;
+        console.log("songOutput", songOutput);
 
-        songList.innerHTML += songOutput;
+        songList.append(songOutput);
+
 
     }
  //    for (let currentSong in data.songs) {
