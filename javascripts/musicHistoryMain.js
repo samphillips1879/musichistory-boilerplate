@@ -1,9 +1,14 @@
 "use strict";
 
+let data = require('./data.js'),
+filt = require('./filtering.js'),
+view = require('./viewControl.js');
+
+
 const listLink = $("#listMusic"),
-listView = $("#listMusicView"),
+// listView = $("#listMusicView"),
 addLink = $("#addMusic"),
-addView = $("#addMusicView"),
+// addView = $("#addMusicView"),
 songList = $("#songListSongHolder"),
 addButton = $("#addButton"),
 inputSongName = $("#inputSongName"),
@@ -11,6 +16,21 @@ inputArtistName = $("#inputArtistName"),
 inputAlbumName = $("#inputAlbumName");
 let songCounter = 0,
 newSongs = [];
+
+
+
+
+// const listLink = $("#listMusic"),
+// listView = $("#listMusicView"),
+// addLink = $("#addMusic"),
+// addView = $("#addMusicView"),
+// songList = $("#songListSongHolder"),
+// addButton = $("#addButton"),
+// inputSongName = $("#inputSongName"),
+// inputArtistName = $("#inputArtistName"),
+// inputAlbumName = $("#inputAlbumName");
+// let songCounter = 0,
+// newSongs = [];
 
 
 
@@ -65,21 +85,28 @@ function requestSongs2() {
     });
 }
 
-listLink.click( () => {
-    listView.addClass("visible");
-    addView.addClass("hidden");
 
-    listView.removeClass("hidden");
-    addView.removeClass("visible");
+listLink.click(()=>{
+    view.listView();
 });
-
-addLink.click( () => {
-    listView.addClass("hidden");
-    addView.addClass("visible");
-
-    listView.removeClass("visible");
-    addView.removeClass("hidden");
+addLink.click(()=>{
+    view.addView();
 });
+// listLink.click( () => {
+//     listView.addClass("visible");
+//     addView.addClass("hidden");
+
+//     listView.removeClass("hidden");
+//     addView.removeClass("visible");
+// });
+
+// addLink.click( () => {
+//     listView.addClass("hidden");
+//     addView.addClass("visible");
+
+//     listView.removeClass("visible");
+//     addView.removeClass("hidden");
+// });
 
 addButton.click(createSongObject);
 

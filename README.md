@@ -161,8 +161,13 @@ Modular with Browserify
 
 Using Browerify, you should create several modules for the application.
 One module is responsible for loading songs from a JSON file and storing them in an array. This module should expose one method for getting the entire list of songs, and one method for adding a song to the array.
+
 One module is responsible for making the filtering form work. Therefore, it will need to use methods from the previous module.
+
 One module is responsible for showing the two views of the app (song list and song form).
+
+
+
 Filtering
 
 When the user selects an artist, only songs from that artist should appear.
