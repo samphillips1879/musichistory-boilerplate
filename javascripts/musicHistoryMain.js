@@ -142,21 +142,44 @@ function createSongObject() {
 
 
 /////////////
-let songsRequest = new XMLHttpRequest();
 
 let songList = $("#songListSongHolder");
 
+function getSongs() {
+    return new Promise(function(resolve, reject) {
+        $.ajax({
+            url: 'data/songs.json'
+        }).done(function(data){
+            resolve(data);
+        }).fail(function(error){
+            reject(error);
+        });
+    });
+}
 
 
-
-songsRequest.addEventListener("load", songsHandler);
 function songsHandler() {
 
+    getSongs()
+    .then(function(songData){
+        console.log("songData", songData);
+        for (let currentSong in songData.songs) {
+            let songOutput = '';
+            let song = songData.songs[currentSong];
+            songOutput += `<div class='song-block'><h1>${song.title}</h1><div class='artist'>Performed by ${song.artist}</div><div class='album'>On the album ${song.album}</div><button>Delete</button></div>`;
+            songList.append(songOutput);
+        }
 
 
 
-    let data = JSON.parse(event.target.responseText);
-    console.log("data", data);
+
+
+    });
+
+
+    // let data = JSON.parse(event.target.responseText);
+    // let data = JSON.parse(event.target.responseText);
+    // console.log("data", data);
 
 
 
@@ -164,56 +187,28 @@ function songsHandler() {
 
 
 
-	for (let currentSong in data.songs) {
-        let songOutput = '';
-        let song = data.songs[currentSong];
-        console.log("song", song);
-        songOutput += `<div class='song-block'><h1>${song.title}</h1><div class='artist'>Performed by ${song.artist}</div><div class='album'>On the album ${song.album}</div><button>Delete</button></div>`;
-        console.log("songOutput", songOutput);
-
-        songList.append(songOutput);
 
 
-    }
- //    for (let currentSong in data.songs) {
- //    	let songOutput = '';
- //        let song = data.songs[currentSong]
- //        songOutput += "<div class='song-block'>";
- //        songOutput += `<h1>${song.title}</h1>`;
- //        songOutput += "<div class='artist'>Performed by ";
- //        songOutput += song.artist;
- //        songOutput += "</div>";
- //        songOutput += "<div class='album'>On the album ";
- //        songOutput += song.album;
- //        songOutput += "</div>";
- //        songOutput += "<button>Delete</button></div>";
 
- //        songList.innerHTML += songOutput;
 
-	// }
+    //  for (let currentSong in data.songs) {
+    //         let songOutput = '';
+    //         let song = data.songs[currentSong];
+    //         songOutput += `<div class='song-block'><h1>${song.title}</h1><div class='artist'>Performed by ${song.artist}</div><div class='album'>On the album ${song.album}</div><button>Delete</button></div>`;
+    //         songList.append(songOutput);
+    //     }
 
-}
-songList.click(songDelete);
 
-function songDelete(event) {
-    if (event.target.innerHTML === "Delete") {
-        console.log("delete innerHTML Test Works");
-        event.target.parentElement.remove();       //THIS LINE IS HOW TO REMOVE THE PARENT OF THE DELETE BUTTON
 
-    }   
-        console.log("deleteEvent", event);
+
+
 }
 
 
-
-songsRequest.open("GET", "songs.json");
-songsRequest.send();
+songsHandler();
 
 
-let songs2Request = new XMLHttpRequest();
-songs2Request.open("GET", "songs2.json");
 
-songs2Request.addEventListener("load", songsHandler);
 
 function requestSongs2() {
     songs2Request.send();
@@ -221,12 +216,50 @@ function requestSongs2() {
 
 
 
+
+
+let songsRequest = new XMLHttpRequest();
+songsRequest.addEventListener("load", songsHandler);
+songsRequest.open("GET", "songs.json");
+// songsRequest.send();
+
+
+
+// let songsRequest = new XMLHttpRequest();
+// songsRequest.addEventListener("load", songsHandler);
+// songsRequest.open("GET", "songs.json");
+// songsRequest.send();
+
+
+
+
+
+let songs2Request = new XMLHttpRequest();
+songs2Request.addEventListener("load", songsHandler);
+songs2Request.open("GET", "songs2.json");
+
+
+
+
+
 $("#moreButton").click(requestSongs2);
-
-
 $("#moreButton").click(function(event) {
     console.log("moreButtonClicked", event);
 });
+
+
+
+
+songList.click(songDelete);
+function songDelete(event) {
+    let targ = $(event.target);
+    if (targ.html() === "Delete") {
+        targ.parent().remove(); 
+    }   
+}
+
+
+
 
 
 
