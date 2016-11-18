@@ -159,10 +159,9 @@ function getSongs() {
 }
 
 
-function songsHandler() {
-
-    getSongs()
-    .then(function(songData){
+function songsHandler(Prom) {
+    // getSongs()
+    Prom.then(function(songData){
         console.log("songData", songData);
         for (let currentSong in songData.songs) {
             let songOutput = '';
@@ -170,11 +169,6 @@ function songsHandler() {
             songOutput += `<div class='song-block'><h1>${song.title}</h1><div class='artist'>Performed by ${song.artist}</div><div class='album'>On the album ${song.album}</div><button>Delete</button></div>`;
             songList.append(songOutput);
         }
-
-
-
-
-
     });
 
 
@@ -206,23 +200,23 @@ function songsHandler() {
 }
 
 
-songsHandler();
+songsHandler(getSongs());
 
 
 
 
-function requestSongs2() {
-    songs2Request.send();
-}
+// function requestSongs2() {
+//     songs2Request.send();
+// }
 
 
 
 
 
-let songsRequest = new XMLHttpRequest();
-songsRequest.addEventListener("load", songsHandler);
-songsRequest.open("GET", "songs.json");
-// songsRequest.send();
+// let songsRequest = new XMLHttpRequest();
+// songsRequest.addEventListener("load", songsHandler);
+// songsRequest.open("GET", "songs.json");
+// // songsRequest.send();
 
 
 
@@ -235,20 +229,23 @@ songsRequest.open("GET", "songs.json");
 
 
 
-let songs2Request = new XMLHttpRequest();
-songs2Request.addEventListener("load", songsHandler);
-songs2Request.open("GET", "songs2.json");
+function requestSongs2() {
+    return new Promise(function(resolve, reject) {
+        $.ajax({
+            url: 'data/songs2.json'
+        }).done(function(data){
+            resolve(data);
+        }).fail(function(error){
+            reject(error);
+        });
+    });
+}
 
 
-
-
-
-$("#moreButton").click(requestSongs2);
-$("#moreButton").click(function(event) {
+$("#moreButton").click(function() {
+    songsHandler(requestSongs2());   
     console.log("moreButtonClicked", event);
 });
-
-
 
 
 songList.click(songDelete);
