@@ -4,13 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>Samuel Phillips Music History</title>
+
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
-
 	<div id="wrapper">
-
 		<div id="navBar">
 			<nav>
 
@@ -19,17 +18,12 @@
 					<li id="addMusic"><a href="#">Add Music</a></li>
 					<!-- <li><a href="#">Profile</a></li> -->
 				</ul>
-
-
-
 			</nav>
 		</div>
 		<article id="listMusicView">
 
 			<div id="filter">
 				<!-- blue (#4DD7FA) filter control  -->
-
-
 				<div id="songLengthFilter">
 					<form>
 						Song Length: <br>
@@ -50,8 +44,6 @@
 							<option value="tipper">Tipper</option>
 						</select>
 					</form>
-
-					
 				</div>
 
 
@@ -72,15 +64,12 @@
 							<option value="seamlessUnspeakableSomething">Seamless Unspeakable Something</option>
 						</select>
 					</form>
-					
 				</div>
 
 
 				<div id="genreFilter">
-
 					<form>
 						Genre: <br>
-
 						<section id="genreLeft">
 							<input type="checkbox" name="genre" value="alt">Alt <br>
 							<input type="checkbox" name="genre" value="psych">Psych <br>
@@ -89,10 +78,7 @@
 							<input type="checkbox" name="genre" value="bass">Bass<br>
 							<input type="checkbox" name="genre" value="glitch">Glitch<br>
 						</section>
-
 					</form>	
-
-					
 				</div>
 
 
@@ -106,15 +92,9 @@
 			</div>
 
 			<div id="songList">
-
-			<h3>Song List:</h3>
-
-				<div id="songListSongHolder">
-					
-				</div>
-
+				<h3>Song List:</h3>
+				<div id="songListSongHolder"></div>
 				<button id='moreButton'>More ></button>
-				
 			</div>
 		</article>
 
@@ -125,16 +105,19 @@
 			<input type="text" size="30" name="inputArtistName" id="inputArtistName"> <br>
 			<span>Album:</span>
 			<input type="text" size="30" name="inputAlbumName" id="inputAlbumName"> <br>
-
 			<button id="addButton">Add</button>
 		</article>
-
 	</div>  <!--here is where the wrapper ends -->
 
 
+
+
+
+	<script type="text/javascript" src="dist/jquery.min.js"></script>
+	<script type="text/javascript" src="dist/app.js"></script>
 	<!-- <script type="text/javascript" src="songs.js"></script> -->
-	<script type="text/javascript" src="musicHistoryMain.js"></script>
-	<script type="text/javascript" src="list.js"></script>
+	<!-- <script type="text/javascript" src="javascripts/musicHistoryMain.js"></script> -->
+	<!-- <script type="text/javascript" src="list.js"></script> -->
 
 
 
@@ -142,10 +125,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-

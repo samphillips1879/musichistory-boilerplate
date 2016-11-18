@@ -1,156 +1,115 @@
-
 body {
-	font-family: helvetica, sans-serif;
-}
+  font-family: helvetica, sans-serif; }
 
 #wrapper {
-	width: 80%;
-	margin: auto;
-}
+  width: 80%;
+  margin: auto; }
 
 div {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 ul {
-	list-style-type: none;
-	padding: 1em;
-	background-color: #FFB4B0;
-	overflow: hidden;
-	border: 2px solid black;
-	/* width: 50%; */
-	/* margin: auto; */
-}
+  list-style-type: none;
+  padding: 1em;
+  background-color: #FFB4B0;
+  overflow: hidden;
+  border: 2px solid black;
+  /* width: 50%; */
+  /* margin: auto; */ }
 
 li {
-	float: left;
-	padding-left: 1%;
-	padding-right: 1%;
-
-}
+  float: left;
+  padding-left: 1%;
+  padding-right: 1%; }
 
 #filter {
-	clear: left;
-	width: 25%;
-	background-color: #4DD7FA;
-	border: 2px solid black;
-	padding: 1%;
-	float: left;
-	height: 600px;
-
-}
+  clear: left;
+  width: 25%;
+  background-color: #4DD7FA;
+  border: 2px solid black;
+  padding: 1%;
+  float: left;
+  height: 600px; }
 
 select {
-	width: 50%;
-}
+  width: 50%; }
 
 input.widthAdjust {
-	width: 50%;
-}
+  width: 50%; }
 
 #addMusic {
-	border-left: 2px solid black;
-	border-right: 2px solid black;
-}
-
+  border-left: 2px solid black;
+  border-right: 2px solid black; }
 
 /*#genreFilter input {
 	float: left;
 	width: 40%;
 	overflow: hidden;
 }*/
-
 section {
-	float: left;
-	width: 50%;
-	overflow: hidden;
-}
-
-h2 {
-}
+  float: left;
+  width: 50%;
+  overflow: hidden; }
 
 #filterSubmit {
-	clear: left;
-	margin: auto;
-	/*padding-right: 25%;*/
-	margin-top: 4em;
-	text-align: center;
-}
+  clear: left;
+  margin: auto;
+  /*padding-right: 25%;*/
+  margin-top: 4em;
+  text-align: center; }
 
 #submitButton {
-	/*padding: %;*/
-}
+  /*padding: %;*/ }
 
 #songList {
-	border: 2px solid black;
-	background-color: #FEFAC0;
-	width: 68%;
-	/*margin-left: 10px;*/
-	float: left;
-	padding: 1%;
-	min-height: 400px;
-	margin-left: 1%;
-	overflow: auto;
-	height: 600px;
-	/*line-height: 2em;*/
-
-}
+  border: 2px solid black;
+  background-color: #FEFAC0;
+  width: 68%;
+  /*margin-left: 10px;*/
+  float: left;
+  padding: 1%;
+  min-height: 400px;
+  margin-left: 1%;
+  overflow: auto;
+  height: 600px;
+  /*line-height: 2em;*/ }
 
 #songList h2 {
-	color: #785616;
-	font-weight: 500;
-}
+  color: #785616;
+  font-weight: 500; }
 
 #songList div {
-	clear: left;
-}
-
-article {
-}
-
-
-
-
+  clear: left; }
 
 .visible {
-	display: block;
-}
+  display: block; }
 
 .hidden {
-	display: none;
-}
-
+  display: none; }
 
 #addMusicView {
-	width: 30%;
-	margin: auto;
-	text-align: justify;
-	margin: 5em auto;
-	line-height: 2em;
-	/*background: 4px solid black;*/
-}
+  width: 30%;
+  margin: auto;
+  text-align: justify;
+  margin: 5em auto;
+  line-height: 2em;
+  /*background: 4px solid black;*/ }
 
 /*#addMusicView span {
 	float: left;
 }
 */
 #addMusicView input {
-	float: right;
-}
+  float: right; }
 
 #addMusicView button {
-	position: relative;
-	left: 50%;
-	padding: 5px 25px;
-}
-
+  position: relative;
+  left: 50%;
+  padding: 5px 25px; }
 
 .song-block {
-	border: 2px solid black;
-	padding: 1%;
-}
+  border: 2px solid black;
+  padding: 1%; }
 
-
-
-
+/*# sourceMappingURL=styles.css.map */
