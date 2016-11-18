@@ -101,21 +101,19 @@ Your branch is now merged into the master branch and you can push the master bra
 
 
 
- Instructions      FOR PART 3
+<!-- Instructions FOR PART 3 -->
 
-Time to make Music History into a single page application. Before you begin please review the sample code I provided in JavaScript 103 about building a simple SPA.
+<!-- Time to make Music History into a single page application. Before you begin please review the sample code I provided in JavaScript 103 about building a simple SPA. -->
 
-In the navigation bar, make sure you have two links labeled "List Music", and "Add Music".
-Add a DOM element that contains some input fields for the user to enter in the name of a song, the artist for the song, and the album. You do not need to enclose them in a <form> element because we're not actually submitting this form anywhere.
-Add a <button> element at the bottom of the input fields labeled "Add".
-The input fields and the add button make up the Add Music View.
-The existing view - the combination of the filter form and the song list - will be referred to as the List Music View.
-The Add Music View should not appear when the user first visits your page. The song list with the corresponding filter form should be visible.
-When the user clicks on "Add Music" in the navigation bar, the List Music View should be hidden, and the Add Music View should be shown (see example wireframe).
-When the user clicks on "List Music" in the navigation bar, the Add Music View should be hidden, and the List Music View should be shown (see example wireframe).
-Once the user fills out the song form and clicks the add button, you should collect all values from the input fields, add the song to your array of songs, and update the song list in the DOM.
-
-
+<!-- In the navigation bar, make sure you have two links labeled "List Music", and "Add Music". -->
+<!-- Add a DOM element that contains some input fields for the user to enter in the name of a song, the artist for the song, and the album. You do not need to enclose them in a <form> element because we're not actually submitting this form anywhere. -->
+<!-- Add a <button> element at the bottom of the input fields labeled "Add". -->
+<!-- The input fields and the add button make up the Add Music View. -->
+<!-- The existing view - the combination of the filter form and the song list - will be referred to as the List Music View. -->
+<!-- The Add Music View should not appear when the user first visits your page. The song list with the corresponding filter form should be visible. -->
+<!-- When the user clicks on "Add Music" in the navigation bar, the List Music View should be hidden, and the Add Music View should be shown (see example wireframe). -->
+<!-- When the user clicks on "List Music" in the navigation bar, the Add Music View should be hidden, and the List Music View should be shown (see example wireframe). -->
+<!-- Once the user fills out the song form and clicks the add button, you should collect all values from the input fields, add the song to your array of songs, and update the song list in the DOM. -->
 
 
 
@@ -130,6 +128,8 @@ Once the user fills out the song form and clicks the add button, you should coll
 
 
 
+
+<!-- 
 instructions for version 4 (skipped 3 for now)
 
 
@@ -137,14 +137,14 @@ instructions for version 4 (skipped 3 for now)
 
 
 
-Instructions
+Instructions -->
 
-Part One
+<!-- Part One -->
 
 <!-- Read from local JSON file with an XHR. -->
 <!-- Loop over results and inject into Music History list view. -->
 <!-- Add delete button DOM to each row and, when it is clicked, delete the entire row in the DOM. -->
-Part Two
+<!-- Part Two -->
 
 <!-- Take your music and split it into two JSON file instead of them all living on one file. -->
 <!-- Add a button at the bottom of your music list and label it "More >". -->
@@ -153,7 +153,24 @@ Part Two
 
 
 
+Instructions for part 5
 
+Now is the time to make Music History a fully functional, single page, modular, asychronous, application.
+
+Modular with Browserify
+
+Using Browerify, you should create several modules for the application.
+One module is responsible for loading songs from a JSON file and storing them in an array. This module should expose one method for getting the entire list of songs, and one method for adding a song to the array.
+One module is responsible for making the filtering form work. Therefore, it will need to use methods from the previous module.
+One module is responsible for showing the two views of the app (song list and song form).
+Filtering
+
+When the user selects an artist, only songs from that artist should appear.
+When the user selects an album, only songs from that album should appear.
+Adding Songs
+
+The new music form should have a field for every key on a song object. We started with just Artist, Album, and Title, but you can add more if you wish.
+The music form should be fully functional. When you click the Save Song button, a new object should be added to the array of songs. The DOM should also be immediately updated with the new song added.
 
 
 
